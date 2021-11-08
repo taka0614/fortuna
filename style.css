@@ -19,9 +19,112 @@ img {
 img.logo {
     width: 100px;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 1%;
+    left: 1%;
+    z-index: 100;
 }
+
+.hamburger {
+    display : block;
+    position: fixed;
+    z-index : 3;
+    right : 13px;
+    top   : 12px;
+    width : 42px;
+    height: 42px;
+    cursor: pointer;
+    text-align: center;
+  }
+  .hamburger span {
+    display : block;
+    position: absolute;
+    width   : 30px;
+    height  : 2px ;
+    left    : 6px;
+    background : #555;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition   : 0.3s ease-in-out;
+    transition        : 0.3s ease-in-out;
+  }
+  .hamburger span:nth-child(1) {
+    top: 10px;
+  }
+  .hamburger span:nth-child(2) {
+    top: 20px;
+  }
+  .hamburger span:nth-child(3) {
+    top: 30px;
+  }
+  
+  /* ナビ開いてる時のボタン */
+  .hamburger.active span:nth-child(1) {
+    top : 16px;
+    left: 6px;
+    background :#fff;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform   : rotate(-45deg);
+    transform        : rotate(-45deg);
+  }
+  
+  .hamburger.active span:nth-child(2),
+  .hamburger.active span:nth-child(3) {
+    top: 16px;
+    background :#fff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform   : rotate(45deg);
+    transform        : rotate(45deg);
+  }
+  
+  nav.globalMenuSp {
+    position: fixed;
+    z-index : 2;
+    top  : 0;
+    left : 0;
+    color: #fff;
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity .6s ease, visibility .6s ease;
+  }
+  
+  nav.globalMenuSp ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  nav.globalMenuSp ul li {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    transition: .4s all;
+  }
+  nav.globalMenuSp ul li:last-child {
+    padding-bottom: 0;
+  }
+  nav.globalMenuSp ul li:hover{
+    background :#ddd;
+  }
+  
+  nav.globalMenuSp ul li a {
+    display: block;
+    color: #fff;
+    padding: 5% 0;
+    font-size: 50px;
+    font-family: 'Tangerine', cursive;
+  }
+  
+  /* このクラスを、jQueryで付与・削除する */
+  nav.globalMenuSp.active {
+    opacity: 100;
+  
+  }
 
 .bg-slider {
 	width: 100%;
@@ -33,12 +136,24 @@ img.logo {
 h2 {
     font-family: 'Tangerine', cursive;
     font-size: 60px;
+    color: #8a7d58;
     margin: 3%;
+}
+
+h5 {
+    text-align: center;
+    padding: 3% 0;
+    font-size: 14px;
+}
+
+.contents {
+    padding: 5% 0;
 }
 
 ul.horizontal_scroll {
     display: flex;
     overflow-x: scroll;
+    margin: 5% 0;
 }
 
 ul.horizontal_scroll img {
@@ -48,7 +163,13 @@ ul.horizontal_scroll img {
 }
 
 ul.horizontal_scroll li {
-    padding: 5%;
+    padding: 3%;
+    margin: 1%;
+    border: 5px solid #8a7d58;
+    background-image: url(img/1564792.png);
+    background-size: cover;
+    background-color: rgba(255,255,255,.9);
+    background-blend-mode: lighten;
 }
 
 p.contents_text.animation-target {
@@ -81,10 +202,6 @@ h5.text.animation-target {
     text-align: center
 }
 
-.contents {
-    margin-bottom: 10%;
-}
-
 p.scroll_text {
     font-size: 12px;
 }
@@ -97,7 +214,7 @@ p.text_back {
     position: absolute;
     font-family: 'Tangerine';
     font-size: 67px;
-    top: -40%;
+    top: 0%;
     left: 22%;
     color: rgba(135,125,88, .3);
 }
@@ -113,20 +230,36 @@ p.text_back.text_back2 {
 p.btn {
     color: #fff;
     font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgb(0 0 0 / 50%);
     background-color: #8a7d58;
-    padding: 5% 10%;
+    padding: 3% 10%;
     width: 250px;
     border-radius: 10px;
     box-shadow: 3px 3px 10px rgb(0 0 0 / 50%);
     margin: 3% auto;
+    background-image: url(img/2103641.png);
+    background-position: bottom;
+    background-blend-mode: luminosity;
+    position: relative;
 }
 
-p.information_text.animation-target {
+@keyframes light {
+    0% { left: -20%; }
+    10% { left: 120%; }
+    100% { left: 120%; }
+}
+
+p.information_text {
     padding: 3%;
 }
 
-.access_text.animation-target {
+.access_text {
     padding: 3%;
+    background-image: url(img/1564792.png);
+    background-size: cover;
+    background-color: rgba(255,255,255,.9);
+    background-blend-mode: lighten;
 }
 
 p.accecc_title {
@@ -140,4 +273,69 @@ p.accecc_title {
 
 iframe {
 	width: 300px;
+    margin: 5% 3%;
+}
+
+footer {
+    background-color: #8a7d58;
+    text-align: center;
+    padding: 5% 0;
+    color: #fff;
+}
+
+.animation-target {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+@keyframes flow {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animation-target.active {
+    animation: flow 1s .2s forwards;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+h2.animation-target.active {
+    animation: slide 2s forwards;
+}
+
+@keyframes show-text {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+text-animation , .text-animation span {
+    opacity: 0;
+}
+
+.animation.active.text-animation {
+    animation: show-text .5s;
+}
+
+.animation.active.text-animation span {
+    animation: show-text 1s backwards;
+    opacity: 1;
 }
