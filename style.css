@@ -81,13 +81,31 @@ img.logo {
     top  : 0;
     left : 0;
     color: #fff;
-    background: rgba(0,0,0,0.7);
+    background-color: rgba(105,105,105,.9);
+    background-image: url(img/1564792.png);
+    background-size: cover;
+    background-blend-mode: darken;
     text-align: center;
     width: 100%;
     height: 100vh;
-    opacity: 0;
-    transition: opacity .6s ease, visibility .6s ease;
+    transform: translateX(-100%);
   }
+
+  @keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+  nav.globalMenuSp.active {
+      animation: slide .5s forwards;
+  }
+
   
   nav.globalMenuSp ul {
     margin: 0 auto;
@@ -244,12 +262,6 @@ p.btn {
     position: relative;
 }
 
-@keyframes light {
-    0% { left: -20%; }
-    10% { left: 120%; }
-    100% { left: 120%; }
-}
-
 p.information_text {
     padding: 3%;
 }
@@ -303,16 +315,6 @@ footer {
     animation: flow 1s .2s forwards;
 }
 
-@keyframes slide {
-    0% {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 
 h2.animation-target.active {
     animation: slide 2s forwards;

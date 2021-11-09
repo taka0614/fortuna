@@ -11,7 +11,7 @@ $(function() {
 });
 
 $(function() {
-    $('.hambmenu_anchor').click(function() {
+    $('.hambmenu_anchor , .logo').click(function() {
         $('.globalMenuSp').removeClass('active');
         $('.hamburger').removeClass('active');
     });
