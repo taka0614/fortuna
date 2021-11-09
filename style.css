@@ -246,6 +246,12 @@ p.text_back {
     color: rgba(135,125,88, .3);
 }
 
+p.text_back.back {
+    top: -10%;
+    line-height: 50px;
+    text-align: center;
+}
+
 p.text_back.text_back1 {
     left: 26%;
 }
