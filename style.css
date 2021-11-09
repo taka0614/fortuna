@@ -194,13 +194,13 @@ ul.horizontal_scroll img {
 }
 
 ul.horizontal_scroll li {
-    padding: 3%;
-    margin: 1%;
-    border: 5px solid #8a7d58;
     background-image: url(img/1564792.png);
     background-size: cover;
     background-color: rgba(255,255,255,.9);
     background-blend-mode: lighten;
+    padding: 3%;
+    margin: 1%;
+    border: 5px solid #8a7d58;
 }
 
 p.contents_text.animation-target {
