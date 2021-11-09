@@ -158,6 +158,17 @@ img.logo {
   
   }
 
+  img.sns_icon {
+    width: 70px;
+    position: fixed;
+    bottom: -0.5%;
+    z-index: 100;
+}
+
+.line {
+    right: 0;
+}
+
 .bg-slider {
 	width: 100%;
 	height: 100vh;
