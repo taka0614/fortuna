@@ -357,12 +357,20 @@ text-animation , .text-animation span {
 
 @media (min-width: 769px) {
 
+    img.logo {
+        width: 150px;
+    }
+
     h2 {
         font-size: 120px;
     }
 
     h5 {
         font-size: 20px;
+    }
+
+    nav.globalMenuSp ul li a {
+        font-size: 70px;
     }
 
     p.scroll_text {
