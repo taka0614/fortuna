@@ -194,10 +194,8 @@ ul.horizontal_scroll img {
 }
 
 ul.horizontal_scroll li {
-    background-image: url(img/1564792.png);
+    background-image: url(img/1564792_1.png);
     background-size: cover;
-    background-color: rgba(255,255,255,.9);
-    background-blend-mode: lighten;
     padding: 3%;
     margin: 1%;
     border: 5px solid #8a7d58;
@@ -218,11 +216,9 @@ h5.text.animation-target {
 }
 
 .menu {
-    background-image: url(img/1564792.png);
+    background-image: url(img/1564792_1.png);
     background-size: cover;
     background-position: center;
-    background-color: rgba(255,255,255,.9);
-    background-blend-mode: lighten;
 	margin-bottom: 10%;
 }
 
