@@ -12,8 +12,21 @@ li {
 	list-style: none;
 }
 
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.img_wrap {
+    text-align: center;
+}
+
 img {
 	width: 100%;
+}
+
+.img_wrap img {
+    max-width: 700px;
 }
 
 img.logo {
@@ -274,7 +287,7 @@ p.information_text {
     background-blend-mode: lighten;
 }
 
-p.accecc_title {
+p.access_title {
     font-size: 20px;
     font-weight: bold;
 }
@@ -340,4 +353,62 @@ text-animation , .text-animation span {
 .animation.active.text-animation span {
     animation: show-text 1s backwards;
     opacity: 1;
+}
+
+@media (min-width: 769px) {
+
+    h2 {
+        font-size: 120px;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
+
+    p.scroll_text {
+        font-size: 18px;
+    }
+
+    .access p {
+        font-size: 30px;
+    }
+
+    h5.text.animation-target , p.access_title {
+        font-size: 36px;
+    }
+
+    p.text_back {
+        font-size: 100px;
+        top: 15%;
+        left: 15%;
+    }
+
+    p.contents_text.animation-target.active , .menu_title , .menu_price {
+        font-size: 30px;
+    }
+
+    p.information_text.animation.text-animation.active , footer p {
+        font-size: 30px;
+    }
+
+    ul.horizontal_scroll {
+        display: flex;
+        flex-wrap: wrap;
+        overflow-x: unset;
+        justify-content: center;
+    }
+
+    ul.horizontal_scroll li {
+        width: calc(100%/2.5);
+    }
+
+    ul.horizontal_scroll img {
+        width: 100%;
+        height: auto;
+    }
+
+    iframe {
+        width: 600px;
+        height: 400px;
+    }
 }
