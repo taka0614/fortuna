@@ -13,6 +13,40 @@ li {
 	list-style: none;
 }
 
+.loading {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: 2s;
+    z-index: 100000;
+}
+
+.loading img {
+    width: 150px;
+    height: auto;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+}
+
+.loading.active {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    background-image: url(img/1564792_1.png);
+    background-size: cover;
+    background-color: #fff;
+    visibility: visible;
+}
+
 .container {
     max-width: 1000px;
     margin: 0 auto;

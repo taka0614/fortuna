@@ -1,3 +1,9 @@
+window.addEventListener("load", () => {
+    setTimeout( () => {
+        document.getElementById("loading").classList.remove("active");
+    }, 600)
+});
+
 $(function() {
     $('.hamburger').click(function() {
         $(this).toggleClass('active');
